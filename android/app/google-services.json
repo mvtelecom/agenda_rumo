@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449273475265",
+    "project_id": "agenda-rumo-5daa2",
+    "storage_bucket": "agenda-rumo-5daa2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449273475265:android:70b8ef07d32475a0856440",
+        "android_client_info": {
+          "package_name": "br.com.mvtelecom.agenda_rumo"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449273475265-dliv2j8gslg7jk2p3fa441pi9392hqg2.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDdUDndi3KuGETh1StgZFFtU8WAJnXdpBQ"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449273475265-dliv2j8gslg7jk2p3fa441pi9392hqg2.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
