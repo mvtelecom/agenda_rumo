@@ -1,10 +1,8 @@
-
-import 'package:agenda_rumo/helpers/validator.dart';
 import 'package:agenda_rumo/models/user.dart';
 import 'package:agenda_rumo/models/user_manager.dart';
 import 'package:provider/provider.dart';
 import 'package:flutter/material.dart';
-
+import 'package:agenda_rumo/helpers/validator.dart';
 
 class LoginScreen extends StatelessWidget {
   final TextEditingController emailControler = TextEditingController();
@@ -20,6 +18,15 @@ class LoginScreen extends StatelessWidget {
       appBar: AppBar(
         title: const Text('Entrar'), //titulo da appbar
         centerTitle: true, // centralizar titulo
+        actions: <Widget>[
+          FlatButton(
+            onPressed: () {
+              Navigator.of(context).pushReplacementNamed('/signup');
+            },
+            textColor: Colors.white,
+            child: const Text('CRIAR CONTA', style: TextStyle(fontSize: 14)),
+          )
+        ],
       ),
       body: Center(
         // corpo fica no centro
@@ -85,20 +92,23 @@ class LoginScreen extends StatelessWidget {
                                       ));
                                     },
                                     onSucess: () {
-                                      // TODO: FECHAR TELA DE LOGIN
+                                      Navigator.of(context).pop();
                                     });
                               },
                         color: Theme.of(context).primaryColor,
-                        disabledColor: Theme.of(context).primaryColor.withAlpha(100),
+                        disabledColor:
+                            Theme.of(context).primaryColor.withAlpha(100),
                         textColor: Colors.white,
-                        child: userManger.loading ? CircularProgressIndicator(
-                          valueColor: AlwaysStoppedAnimation(Colors.white),
-                        ) :
-                        const Text(
-                          'Entrar',
-                          style: TextStyle(fontSize: 18 //tamanho da fonte
+                        child: userManger.loading
+                            ? CircularProgressIndicator(
+                                valueColor:
+                                    AlwaysStoppedAnimation(Colors.white),
+                              )
+                            : const Text(
+                                'Entrar',
+                                style: TextStyle(fontSize: 18 //tamanho da fonte
+                                    ),
                               ),
-                        ),
                       ),
                     )
                   ],

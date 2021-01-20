@@ -1,5 +1,5 @@
-import 'package:agenda_rumo/models/page_manager.dart';
 import 'package:flutter/material.dart';
+import 'package:agenda_rumo/models/page_manager.dart';
 import 'package:provider/provider.dart';
 
 class DrawerTile extends StatelessWidget {
